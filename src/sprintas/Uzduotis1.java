@@ -15,10 +15,12 @@ public class Uzduotis1 {
     }
 }
 class Person {
+    //fieldai laukai savybes
     String name;
     String surname;
     int age;
 
+    //konstruktoriai
     public Person(){ }
 
     public Person(String n, String s){
@@ -26,6 +28,7 @@ class Person {
         this.surname = s;
     }
 
+    //
     public int getAge(){
         return this.age;
     }
