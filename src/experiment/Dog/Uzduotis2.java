@@ -1,4 +1,4 @@
-package sprintas.Dog;
+package experiment.Dog;
 import java.util.Arrays;
 import java.util.Scanner;
 

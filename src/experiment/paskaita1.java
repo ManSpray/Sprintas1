@@ -1,4 +1,4 @@
-package sprintas;
+package experiment;
 
 public class paskaita1 {
     public static void main(String[] args){
