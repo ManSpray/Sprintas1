@@ -10,12 +10,13 @@ public class AppF {
 }
 
 class Food {
+    String name;
     String type;
     String color;
 }
 class Vegetables extends Food {
-    String name;
     boolean green;
+
 }
 class Pupkin extends Vegetables {
     double diameter;

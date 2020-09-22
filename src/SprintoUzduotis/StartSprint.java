@@ -27,16 +27,17 @@ public class StartSprint {
         }
 
         String line = "";
-        String cvsSplitBy = ",";
+        String cvsSplitBy = ", ";
 
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-            int count = 0;
+//            int count = 0;
             while ((line = br.readLine()) != null) {
-
                 // use comma as separator
                 String[] emp = line.split(cvsSplitBy);
-//                System.out.println(emp[count].toString());
-                System.out.println("[Salary: " + emp[3] + ", ID: " + emp[2] + ", name: " + emp[0] + " , surname:" + emp[1] + "]");
+                Employee emp1 = new Employee(emp[0], emp[1], Integer.parseInt(emp[2]), Double.parseDouble(emp[3]));
+//                setName(emp[0]);
+                System.out.println(emp1.toString());
+//                System.out.println("[Salary: " + emp[3] + ", ID: " + emp[2] + ", name: " + emp[0] + " , surname:" + emp[1] + "]");
 //                count++;
             }
 
@@ -44,6 +45,48 @@ public class StartSprint {
             e.printStackTrace();
         }
 
+    }
+}
+class Employee {
+    private String name;
+    private String surname;
+    private int tabNumber;
+    private double salary;
+
+    Employee(){}
+
+    Employee(String va, String ve, int vi, double vu){
+        this.name = va;
+        this.surname = ve;
+        this.tabNumber = vi;
+        this.salary = vu;
+
+    }
+
+    public String getName(){
+        return this.name;
+    }
+    public String getSurname(){
+        return this.surname;
+    }
+    public int getTabNumber(){
+        return this.tabNumber;
+    }
+    public double getSalary(){
+        return this.salary;
+    }
+
+    public void setName(String name){ this.name = name; }
+    public void setSurname(String surname){ this.surname = surname; }
+    public void setTabNumber(int tabNumber){ this.tabNumber = tabNumber; }
+    public void setSalary(double salary){ this.salary = salary; }
+
+
+
+    @Override
+    public String toString() {
+        return "{ vardas= " + name + ", pavardė= " + surname
+                + ", tab number= " + tabNumber + ", salary= " + salary + '}';
     }
 
 }
