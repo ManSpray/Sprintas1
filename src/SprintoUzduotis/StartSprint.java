@@ -32,7 +32,7 @@ public class StartSprint {
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 //            int count = 0;
             while ((line = br.readLine()) != null) {
-                // use comma as separator
+                // use comma and space as separator
                 String[] emp = line.split(cvsSplitBy);
                 Employee emp1 = new Employee(emp[0], emp[1], Integer.parseInt(emp[2]), Double.parseDouble(emp[3]));
 //                setName(emp[0]);
