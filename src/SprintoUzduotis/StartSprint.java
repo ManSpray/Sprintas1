@@ -19,7 +19,7 @@ public class StartSprint {
 
             String NewEmployee = myObj.nextLine();  // Read user input
 //            System.out.println("Username is: " + userName);  // Output user input
-            String fileLine = "\n"+NewEmployee;
+            String fileLine = NewEmployee+"\n";
             bufferedWriter.write(fileLine);
             bufferedWriter.close();
         } catch(IOException e) {
